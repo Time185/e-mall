@@ -38,7 +38,7 @@ public class CartServlet extends BaseServlet {
 		cart.addCart(cartItem);
 		// 将cart存入session   不能放到request  容易失效
 		System.out.println(cart.getTotal() + "------------");
-		cart.addCart(cartItem);
+		
 		return "/jsp/cart.jsp";
 	}
 	public String removeCartItem(HttpServletRequest request,HttpServletResponse response) {

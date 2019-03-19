@@ -10,8 +10,6 @@ public class Cart {
 	private double total = 0; // 总价
 	
 	
-	
-	
 	public Map<String, CartItem> getMap() {
 		return map;
 	}
@@ -36,9 +34,12 @@ public class Cart {
 		// 判断该类商品之前是否添加到购物车
 		if(map.containsKey(pid)) {
 			// 之前存在，那么更改该类商品的数量
+			
 			map.get(pid).setNum(map.get(pid).getNum() + cartItem.getNum());
+			
 		}else {
 			// 之前不存在，直接加入购物车
+		
 			map.put(pid, cartItem);
 		}
 	}

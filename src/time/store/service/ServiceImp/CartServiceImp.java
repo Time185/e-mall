@@ -19,6 +19,7 @@ public class CartServiceImp implements CartService {
 		Product product = dao.findProductById(pid);
 		CartItem cartItem = new CartItem();
 		cartItem.setProduct(product);
+		System.out.println("num=" + num);
 		cartItem.setNum(num);
 		cartItem.setTotalItem(product.getShop_price()*num);
 		return cartItem;
