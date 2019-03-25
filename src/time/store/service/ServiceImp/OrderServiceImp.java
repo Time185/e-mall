@@ -54,7 +54,7 @@ public class OrderServiceImp implements OrderService {
 		// 调用dao层获取PageModel
 		List list = dao.findMyOrdersWithPage(pm.getStartIndex(), pm.getPageSize(), user);
 		pm.setList(list);
-		System.out.println(pm.getTotalPageNum() + "456856465455555");
+		
 		pm.setUrl("OrderServlet?method=findMyOrdersWithPage");
 		return pm;
 	}
